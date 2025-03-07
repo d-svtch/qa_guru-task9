@@ -172,3 +172,5 @@ cython_debug/
 
 # Allure Reports
 .allure-results
+/allure-results/
+/tests/allure-results/
