@@ -3,9 +3,15 @@ from selene.support import by
 from selene.support.conditions import be
 from selene.support.shared import browser
 from selene.support.shared.jquery_style import s
+from allure_commons.types import Severity
 
 
 def test_dynamic_steps():
+    allure.dynamic.tag("steps")
+    allure.dynamic.severity(Severity.CRITICAL)
+    allure.dynamic.feature("Использование динамических шагов")
+    allure.dynamic.story("Данные тесты запускаются с использованием динамических шагов")
+
     with allure.step("Открываем главную страницу"):
         browser.open("https://github.com")
 

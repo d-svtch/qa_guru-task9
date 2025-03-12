@@ -2,9 +2,15 @@ import allure
 from selene.support import by
 from selene.support.shared import browser
 from selene.support.shared.jquery_style import s
+from allure_commons.types import Severity
 
 
+@allure.tag("decorators")
+@allure.severity(Severity.CRITICAL)
+@allure.feature("Использование декораторов")
+@allure.story("Данные тесты запускаются с использованием декораторов")
 def test_decorator_steps():
+
     open_main_page()
     search_for_repository("eroshenkoam/allure-example")
     go_to_repository("eroshenkoam/allure-example")
